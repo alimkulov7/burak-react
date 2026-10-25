@@ -6,10 +6,11 @@ import App from "./app/App";
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import reportWebVitals from "./reportWebVitals";
-import theme from "./theme";
+
 
 // @ts-ignore CSS is loaded by the bundler and has no TypeScript module declaration.
 import "./css/index.css";
+import theme from "./app/material/MaterialTheme";
 
 ReactDOM.render(
   <React.StrictMode>
