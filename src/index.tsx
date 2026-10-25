@@ -3,14 +3,22 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import App from "./app/App";
+import CssBaseline from '@mui/material/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
 import reportWebVitals from "./reportWebVitals";
+import theme from "./theme";
+
 // @ts-ignore CSS is loaded by the bundler and has no TypeScript module declaration.
 import "./css/index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <ThemeProvider  theme={theme}>
+      <CssBaseline />
       <App />
+    </ThemeProvider>
+    <Provider store={store}>
+      
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
