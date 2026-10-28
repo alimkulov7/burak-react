@@ -2,7 +2,11 @@ import { Box, Button, Container, Stack } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 export function HomeNavbar() {
+<<<<<<< HEAD
     const authMember = true;
+=======
+    const authMember = null;
+>>>>>>> b8f827a (feat develop header and footers part one)
   return (
     <div className="home-navbar">
       <Container sx={{ mt: "55px", height: "642px" }}>
