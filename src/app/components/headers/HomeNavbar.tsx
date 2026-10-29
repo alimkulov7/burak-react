@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 export function HomeNavbar() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     const authMember = true;
 =======
     const authMember = null;
@@ -11,6 +12,9 @@ export function HomeNavbar() {
 =======
     const authMember = true;
 >>>>>>> 94f51aa (fix: homeNavbar menu part refactoring)
+=======
+    const authMember = null;
+>>>>>>> ae31cf2 (fix: modify homeNavbar header component)
   return (
     <div className="home-navbar">
       <Container className="navbar-container">
@@ -59,7 +63,29 @@ export function HomeNavbar() {
           </Stack>
         </Stack>
 
-        <Stack>DETAIL</Stack>
+        <Stack className="header-frame">
+          <Stack className="detail">
+            <Box className ="head-main-txt">
+              World's Most Delicious Cousine
+            </Box>
+            <Box className= "wel-txt">The Choice, not just a choice</Box>
+            <Box className= "service-txt">24 hours service</Box>
+            <Box className = "signup">
+              {!authMember ? (
+                <Button
+                variant="contained"
+                className="signup-button"
+                >SIGN UP</Button>
+              ) : null}
+            </Box>
+
+          </Stack>
+          <Stack className="logo-frame">
+              <Box className="logo-frame">
+                <div className="logo-img"></div>
+              </Box>
+          </Stack>
+        </Stack>
       </Container>
     </div>
   );
