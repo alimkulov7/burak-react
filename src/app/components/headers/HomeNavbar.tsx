@@ -3,37 +3,26 @@ import { NavLink } from "react-router-dom";
 
 export function HomeNavbar() {
 <<<<<<< HEAD
+<<<<<<< HEAD
     const authMember = true;
 =======
     const authMember = null;
 >>>>>>> b8f827a (feat develop header and footers part one)
+=======
+    const authMember = true;
+>>>>>>> 94f51aa (fix: homeNavbar menu part refactoring)
   return (
     <div className="home-navbar">
-      <Container sx={{ mt: "55px", height: "642px" }}>
-        <Stack
-          
-          sx={{
-            height: "50px",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
+      <Container className="navbar-container">
+        <Stack className="menu">
           <Box className={"hover-line"}>
             <NavLink to="/">
-              <img src="/icons/burak.svg"
+              <img className="brand-logo" src="/icons/burak.svg"
               style={{ width: "125px", height: "30px" }} />
             </NavLink>
           </Box>
 
-          <Stack
-            direction="row"
-            sx={{
-              justifyContent: "space-between",
-              minWidth: "700px",
-              alignItems: "center",
-            }}
-          >
+          <Stack className="links">
             <Box className={"hover-line"}>
               <NavLink to="/" activeClassName={"underline"}>Home</NavLink>
             </Box>
@@ -58,11 +47,13 @@ export function HomeNavbar() {
                 <Box>
                     <Button
                     variant="contained"
-                    style={{background: "#3776CC", color: "#f8f8ff"}}
+                    className="login-button"
                     >Login</Button>
                 </Box>
             ) : (
-                <img />
+                <img className="user-avatar"
+                src="/icons/default-user.svg"
+                aria-haspopup={"true"}/>
             )}
 
           </Stack>

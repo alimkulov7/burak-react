@@ -10,11 +10,9 @@ import reportWebVitals from "./reportWebVitals";
 import "./css/index.css";
 import theme from "./app/material/MaterialTheme";
 
-const container = document.getElementById("root");
+const container = document.getElementById("root")!;
 
-if (!container) {
-  throw new Error("Root container not found");
-}
+
 
 const root = createRoot(container);
 
