@@ -1,12 +1,17 @@
 import { Box, Button, Container, Stack } from "@mui/material";
 import { NavLink } from "react-router-dom";
+import Basket from "./Basket";
 
+<<<<<<< HEAD
 export function HomeNavbar() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     const authMember = true;
 =======
+=======
+export default function HomeNavbar() {
+>>>>>>> f23528b (feat: integration footer and basket source)
     const authMember = null;
 >>>>>>> b8f827a (feat develop header and footers part one)
 =======
@@ -46,7 +51,8 @@ export function HomeNavbar() {
             <Box className={"hover-line"}>
               <NavLink activeClassName={"underline"} to="/help">HelpPage</NavLink>
             </Box>
-            {/* BASKET */}
+            
+            <Basket />
             {!authMember ? (
                 <Box>
                     <Button
