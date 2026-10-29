@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { store } from "./app/store";
 import App from "./app/App";
@@ -7,13 +7,18 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { BrowserRouter as Router } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
-
-
-// @ts-ignore CSS is loaded by the bundler and has no TypeScript module declaration.
 import "./css/index.css";
 import theme from "./app/material/MaterialTheme";
 
-ReactDOM.render(
+const container = document.getElementById("root");
+
+if (!container) {
+  throw new Error("Root container not found");
+}
+
+const root = createRoot(container);
+
+root.render(
   <React.StrictMode>
     <ThemeProvider  theme={theme}>
       <CssBaseline />
@@ -25,7 +30,6 @@ ReactDOM.render(
       
     </Provider>
   </React.StrictMode>,
-  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
