@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import { Box, Container, Stack } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -17,8 +18,16 @@ export default function Footer() {
   return (
     <Footers>
       <Container>
-        <Stack direction={"row"} sx={{ mt: "94px" }}>
-          <Stack direction={"column"} style={{ width: "340px" }}>
+        <Stack 
+          sx={{ 
+            mt: "94px",
+            flexDirection: "row",
+          }}>
+          <Stack 
+            style={{ 
+              width: "340px", 
+              flexDirection: "column", 
+            }}>
             <Box>
               <img width={"100px"} src={"/icons/burak.svg"} />
             </Box>
@@ -34,7 +43,10 @@ export default function Footer() {
               <img src={"/icons/youtube.svg"} />
             </Box>
           </Stack>
-          <Stack sx={{ ml: "288px" }} direction={"row"}>
+          <Stack sx={{ 
+              ml: "288px",
+              flexDirection: "row",
+            }}>
             <Stack>
               <Box>
                 <Box className={"foot-category-title"}>Bo'limlar</Box>
@@ -50,27 +62,30 @@ export default function Footer() {
               <Box>
                 <Box className={"foot-category-title"}>Find us</Box>
                 <Box
-                  sx={{
+                  sx={{ 
                     mt: "20px",
-                    display: "flex",
-                    flexDirection: "column",
                     justifyContent: "space-between",
+                    flexDirection: "column",
                   }}
                   className={"foot-category-link"}
                 >
-                  <Box sx={{ display: "flex", flexDirection: "row" }} className={"find-us"}>
+                  <Box sx={{
+                      flexDirection: "row",
+                    }} 
+                    className={"find-us"}
+                  >
                     <span>L.</span>
                     <div>Downtown, Dubai</div>
                   </Box>
-                  <Box sx={{ display: "flex", flexDirection: "row" }} className={"find-us"}>
+                  <Box className={"find-us"}>
                     <span>P.</span>
                     <div>+971 4 554 7777</div>
                   </Box>
-                  <Box sx={{ display: "flex", flexDirection: "row" }} className={"find-us"}>
+                  <Box className={"find-us"}>
                     <span>E.</span>
                     <div>devexuz@gmail.com</div>
                   </Box>
-                  <Box sx={{ display: "flex", flexDirection: "row" }} className={"find-us"}>
+                  <Box className={"find-us"}>
                     <span>H.</span>
                     <div>Visit 24 hours</div>
                   </Box>
